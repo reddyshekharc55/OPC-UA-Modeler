@@ -1,0 +1,8 @@
+.app-content {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 64px);
+  padding: 1rem;
+  overflow: auto;
+  background-color: var(--theme-color-std-bkg);
+}
