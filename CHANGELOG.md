@@ -8,6 +8,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Theme toggle functionality with light/dark mode support
+- Enhanced NodeGrid component with hierarchical display
+- Advanced column features for grid view (sorting, filtering)
+- Application header with logo and additional control buttons
+
+### Fixed
+- Recent Files dropdown visibility and UX improvements in FileImport component
+- IxEmptyState icon import in DetailPanel component
+- ESLint exhaustive-deps warning for resize handlers in NodeGrid
+
+### Changed
+- Enhanced localStorage mock implementation for better test coverage
+
+## [0.2.1] - 2026-01-30
+
+### Added
+- Comprehensive test suite for NodeGraph component
+- UI/UX improvements across the application
+
+### Changed
+- Updated test cases for better coverage and reliability
+
+### Contributors
+- [@varun9619](https://github.com/varun9619)
+- [@reddyshekharc55](https://github.com/reddyshekharc55)
+
+## [0.1.1] - 2026-01-28
+
+### Added
+- Publishing packages to GitHub Packages (npm registry)
+- Package publishing workflow
+
+## [0.1.0] - 2026-01-28
+
+### Added
 - CONTRIBUTING.md with setup, testing, and PR process guidelines
 - CHANGELOG.md for tracking project changes
 - File import functionality with drag-and-drop XML file upload
@@ -34,8 +69,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - ReferenceType
   - DataType
   - View
-
-### Technical Stack
 - React 18 for UI framework
 - TypeScript for type-safe development
 - Vite as build tool
@@ -43,15 +76,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - xml2js for XML parsing
 - Vitest for testing
 - ESLint for code quality
-
-### Components
 - DetailPanel component for node details display
 - FileImport component for file upload handling
 - NodeDetails component for detailed node information
 - NodeGraph component for graph visualization
 - NodeTree component for tree view navigation
 - VisualizationOptions component for view controls
-
-### Services
 - file-import.service for file handling
 - nodeset-parser.service for XML parsing logic
+
+[Unreleased]: https://github.com/IndustrialSoftwares/OPC-UA-Modeler/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/IndustrialSoftwares/OPC-UA-Modeler/compare/v0.1.1...v0.2.1
+[0.1.1]: https://github.com/IndustrialSoftwares/OPC-UA-Modeler/compare/v0.1.0...v0.1.1
+[0.1.0]: https://github.com/IndustrialSoftwares/OPC-UA-Modeler/releases/tag/v0.1.0

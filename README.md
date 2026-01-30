@@ -5,24 +5,67 @@ Currently this application allows you to import and view OPC UA nodeset XML file
 
 ## Features
 
-- 📁 **File Import**: Drag-and-drop XML file upload with validation
-- 🌳 **Tree Navigation**: Hierarchical view of OPC UA nodes with expandable/collapsible structure
-- 📊 **Data Grid**: Comprehensive table view with sorting and filtering capabilities
-- 🔍 **Search**: Quick search across node properties
+- 📁 **File Import**: 
+  - Drag-and-drop XML file upload with validation
+  - Recent files history with quick access
+  - Multiple file support with required model detection
+  - Namespace conflict resolution strategies (reject, rename, merge, warn)
+  - Progress tracking for large files
+  - File size validation and error handling
+- 🌳 **Tree Navigation**: 
+  - Hierarchical view of OPC UA nodes with expandable/collapsible structure
+  - Expand All / Collapse All functionality
+  - Keyboard navigation (Arrow keys, Enter)
+  - Node type filtering (Object, Variable, Method, etc.)
+  - Auto-scroll to selected node
+- 📊 **Enhanced Data Grid**: 
+  - Hierarchical display with expandable parent nodes
+  - Multi-column sorting (Shift+Click for multiple columns)
+  - Advanced filtering and search with column-specific filters
+  - Resizable columns with persistent widths
+  - Toggle between flat and hierarchical views
+  - Node type multi-select filtering
+- 🔄 **View Mode Toggle**: Seamlessly switch between Tree and Grid views
+- 🔍 **Search**: Quick search across node properties (Display Name, Browse Name, Node ID, Description)
+- 📋 **Detail Panel**: 
+  - Comprehensive node information display
+  - Copy to clipboard functionality for Node IDs and properties
+  - Reference navigation with grouping by type
+  - Hierarchy view (Parent, Type Definition, Base Type)
+  - Collapsible sections for organized viewing
+- 🌓 **Theme Toggle**: Light/dark mode support with system preference detection
 - 🎨 **Siemens IX Design**: Professional UI using Siemens IX component library
-- 📱 **Responsive**: Resizable split-pane layout
+- 📱 **Responsive**: Resizable split-pane layout with persistent preferences
+- ✅ **Validation**: XML validation, file size checks, and namespace conflict detection
 
 ## Supported Features
 
-The viewer displays the following node information:
+The viewer displays comprehensive node information including:
+
+**Basic Properties:**
 - Display Name
+- Browse Name
+- Node ID
 - Node Class
+- Description
+
+**Type Information:**
 - Data Type
 - Value Rank
 - Is Mandatory
-- Type
-- Derived From
-- Description
+- Type Definition
+- Base Type / Derived From
+
+**Relationships:**
+- References (grouped by type: HasComponent, HasProperty, HasTypeDefinition, etc.)
+- Forward and backward references
+- Parent/Child hierarchy
+- Clickable reference navigation
+
+**Additional Features:**
+- Namespace information
+- Required models detection
+- Node counts and statistics
 
 ## Technology Stack
 
@@ -96,11 +139,40 @@ Notes:
 
 ## Usage
 
-1. **Import a Nodeset**: Click the upload area or drag-and-drop an OPC UA nodeset XML file
-2. **Navigate**: Use the tree view on the left to explore the node hierarchy
-3. **View Details**: Select nodes to view their details in the data grid
-4. **Search**: Use the search box to filter nodes by name or properties
-5. **Sort**: Click column headers to sort the data
+1. **Import a Nodeset**: 
+   - Click the upload button or drag-and-drop an OPC UA nodeset XML file
+   - Access recently imported files from the dropdown
+   - Import multiple related nodesets (handles required models)
+   - Choose namespace conflict resolution strategy if needed
+
+2. **Switch Views**: Toggle between Tree and Grid views using the view switcher button in the header
+
+3. **Navigate Tree View**: 
+   - Expand/collapse individual nodes or use Expand All / Collapse All buttons
+   - Filter by node type using the checkboxes
+   - Use keyboard navigation:
+     - ↑↓ arrows to move between nodes
+     - →← arrows to expand/collapse nodes
+     - Enter to select a node
+   - Search across all node properties
+
+4. **Navigate Grid View**: 
+   - Toggle hierarchical/flat display
+   - Expand/collapse parent nodes to show children
+   - Resize columns by dragging column borders (saved automatically)
+   - Multi-sort by Shift+clicking column headers
+   - Filter individual columns using the filter inputs
+   - Filter by node type using the multi-select dropdown
+
+5. **View Details**: 
+   - Select any node to view comprehensive details in the detail panel (Tree view) or bottom panel
+   - Click "Copy" buttons to copy Node IDs and properties to clipboard
+   - Navigate relationships by clicking on reference links
+   - Expand/collapse sections for organized viewing
+
+6. **Change Theme**: Click the theme toggle button to switch between light and dark modes (preference saved)
+
+7. **Clear**: Use the Clear button to reset the viewer and start over
 
 ## Scripts
 
@@ -243,7 +315,7 @@ Note: consumers need authentication for GitHub Packages. They must create an `~/
 This produces a `*.tgz` file which can be installed locally, for example:
 
 ```bash
-npm install -g ./IndustrialSoftwares-opc-ua-modeler-0.1.0.tgz
+npm install -g ./IndustrialSoftwares-opc-ua-modeler-0.2.1.tgz
 opc-ua-modeler --port 5173
 ```
 

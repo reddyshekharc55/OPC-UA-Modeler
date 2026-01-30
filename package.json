@@ -1,7 +1,7 @@
 {
   "name": "@IndustrialSoftwares/opc-ua-modeler",
   "version": "0.2.1",
-  "description": "Web Version of the OPC UA Modeler",
+  "description": "Web-based OPC UA Information Model Viewer with hierarchical navigation, advanced filtering, theme support, and comprehensive nodeset analysis",
   "type": "module",
   "license": "MIT",
   "repository": {
