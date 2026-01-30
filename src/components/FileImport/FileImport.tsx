@@ -243,7 +243,7 @@ const FileImportModal = ({ onNodesetLoaded, onError, maxFileSize = 10 * 1024 * 1
         setUploadState(UploadFileState.UPLOAD_SUCCESSED);
         
         // Close modal after successful upload
-        setTimeout(() => modalRef.current?.close(), 1500);
+        setTimeout(() => modalRef.current?.close(null), 1500);
 
         const recentEntry: RecentFileEntry = {
           id: metadata.id,
